@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WORDLY SEARCH PAGE</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="script.js"></script>
+</head>
+
+
+<body>
+    <header>
+    <h1 class="text-3xl font-bold" id="wordly-title">Wordly search page</h1>
+</header>
+    <main>
+        <div class="search-description font-serif text-3xl font-bold">
+            Look up for any word and get its definition, phonetic, synonyms, and audio pronunciation.
+        </div>
+        <form class="search-form" id="search-form">
+            <label for="search-input">Search for a word:</label>
+            <input class="border-black border-2 bg-white rounded text-black " type="text" id="search-input" placeholder="Type a word"></input>
+            <button type="submit" class="form-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="search-button">Search</button>
+        </form>
+
+        <p id="status" aria-live="polite" class="text-2xl font-serif"></p>
+        
+<section>
+    <div id="results-container">
+        <h2 class="text-3xl font-serif font-bold">Search Results</h2>
+
+        <div class="result-text">
+            <h3 id="word" class="text-2xl font-serif"></h3>
+
+            <h4><strong>Pronunciation:</strong></h4>
+            <p id="phonetic" class="text-2xl font-serif"></p>
+
+
+          <button id="play-btn" aria-label="Play pronunciation">Play</button> <audio id="audio" hidden></audio>
+          
+
+
+            <p id="definition"><strong>Definition:</strong></p>
+            
+            <h5><strong>Synonyms:</strong></h5>
+            <ul id="synonyms" class="text-2xl font-serif"></ul>
+        </div>
+    </div>
+</section>
+    </main>
+
+</body>
+
+</html>
